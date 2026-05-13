@@ -1,0 +1,102 @@
+<!-- employes.html (Page Employés) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - Meca Oil Power</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+    <header>
+        <img src="../assets/images/mecaoilpower.jpg" alt="Logo Meca Oil Power" class="logo-header">
+        <div style="flex: 1; text-align: left; margin-left: 20px;">
+            <h1>Meca Oil Power</h1>
+            <p class="slogan">Vos pièces automobiles de confiance</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="produits.html">Nos Produits</a></li>
+                <li><a href="employes.html">Notre équipe</a></li>
+                <li><a href="histoire.html">Notre Histoire</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Notre Équipe</h2>
+            <p>Découvrez l'organigramme de notre entreprise :</p>
+            
+            <div class="org-chart">
+                <!-- Niveau 1 : PDG -->
+                <div class="org-level level-1">
+                    <div class="org-box employee" data-employee="pdi">
+                        <div class="employee-name">Damien Demange</div>
+                        <div class="employee-role">PDG</div>
+                    </div>
+                </div>
+
+                <div class="org-connector vertical"></div>
+                <div class="org-connector horizontal"></div>
+
+                <!-- Niveau 2 : Managers -->
+                <div class="org-level level-2">
+                    <div class="org-box employee" data-employee="fp" data-team="mag">
+                        <div class="employee-name">François Pichot</div>
+                        <div class="employee-role">Responsable Magasin</div>
+                    </div>
+                    <div class="org-box employee" data-employee="jed" data-team="vend">
+                        <div class="employee-name">Jean-Eude Durant</div>
+                        <div class="employee-role">Responsable Service Commercial</div>
+                    </div>
+                    <div class="org-box employee" data-employee="bd">
+                        <div class="employee-name">Baptiste Dias</div>
+                        <div class="employee-role">Chargé de Marketing</div>
+                    </div>
+                </div>
+
+                <div class="org-connector vertical-2"></div>
+
+                <!-- Niveau 3 : Équipes -->
+                <div class="org-level level-3">
+                    <div class="org-team" data-employee="mag">
+                        <div class="org-box employee" data-employee="mag">
+                            <div class="employee-name">Sebastien Reichmann</div>
+                            <div class="employee-role">Magasinier</div>
+                        </div>
+                    </div>
+                    <div class="org-team" data-employee="vend">
+                        <div class="org-box employee" data-employee="vend" style="transform: translateX(-50px);">
+                            <div class="employee-name">Paul Bison</div>
+
+                            <div class="employee-role">Vendeur</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal détail employé (affiche le PDF de fiche de poste) -->
+            <div class="modal-overlay" id="employeeModal" aria-hidden="true">
+                <div class="modal" role="dialog" aria-modal="true">
+                    <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+                    <div class="employee-detail">
+                        <h3 id="empName">Nom</h3>
+                        <p id="empRole" class="emp-role">Poste</p>
+                        <div class="emp-pdf-container">
+                            <iframe id="empPdf" src="" title="Fiche de poste" frameborder="0"></iframe>
+                            <p class="pdf-link"><a id="empPdfLink" href="#" target="_blank">Ouvrir la fiche en plein écran</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Meca Oil Power. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/employes.js"></script>
+</body>
+</html>
